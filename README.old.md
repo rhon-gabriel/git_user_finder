@@ -1,1 +1,0 @@
-# git_user_finder
