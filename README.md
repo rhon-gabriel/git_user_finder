@@ -1,4 +1,4 @@
-# Git_user_finder
+# Github User Finder
 
 This app will help you find Github users based on the login, email or name.
 Additionally, you'll be able to find users, based on the number of followers, equal or less to indicated.
