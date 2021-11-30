@@ -11,7 +11,7 @@ const Header = () => {
       </Link>
       <div className={styles.header}>Github User Finder</div>
       <div className={styles.favorites}>
-        <Link exact to="/favorites">
+        <Link to="/favorites">
           <div className={styles.text}>Favorites</div>
         </Link>
       </div>
