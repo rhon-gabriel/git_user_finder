@@ -1,0 +1,22 @@
+.input {
+    width: 60% !important;
+    height: 50px;
+    border-radius: 10px !important;
+    margin-right: 10px !important;
+}
+
+.inputNumber {
+    width: 25% !important;
+    border-radius: 10px !important;
+    margin-right: 10px !important;
+    :global {
+        .ant-input-number-input {
+            height: 50px; 
+        }
+    }
+}
+.button {
+    width: 10% !important;
+    border-radius: 10px !important;
+    height: 50px !important;
+}

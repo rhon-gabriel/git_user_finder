@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Col, Row, Alert } from "antd";
 import styles from "./Users.module.scss";
 import SpinLoader from "../../../components/SpinLoader/SpinLoader";
-import UsersTable from "./UsersTable";
+import UsersTable from "./UsersTable/UsersTable";
 import SmallCard from "../../../components/Card/SmallCard";
 
 const Users = () => {

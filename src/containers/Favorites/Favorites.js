@@ -20,7 +20,7 @@ const Favorites = () => {
   return (
     <div className={styles.cardWrapper}>
       <Button onClick={() => navigate("/users")}>Back</Button>
-      {favorites && (
+      {favorites ? (
         <>
           <div className={styles.text}>Favorites: </div>
           <Row gutter={16}>
@@ -34,6 +34,8 @@ const Favorites = () => {
               })}
           </Row>
         </>
+      ) : (
+        <p>You have no favorited users</p>
       )}
     </div>
   );

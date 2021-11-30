@@ -9,14 +9,21 @@
     color: #429b83;
   }
   .header {
-    font-size: 18px;
+    font-size: 20px;
   }
   .favorites {
     position: absolute;
     top: 0;
     right: 20px;
-    .text {
+    .textFavorites {
       font-size: 14px;
+      color: #ee7474;
+      font-weight: 600;
     }
   }
+}
+.text {
+  padding: 0 20px;
+  line-height: 8px;
+  color: #37836f;
 }

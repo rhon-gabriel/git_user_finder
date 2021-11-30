@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { Table, Button } from "antd";
+import { Table, Button, message } from "antd";
 import { HeartFilled } from "@ant-design/icons";
+import styles from "./UsersTable.module.scss";
 
 const UsersTable = () => {
   const { results } = useSelector((state) => state.users);
@@ -12,7 +13,7 @@ const UsersTable = () => {
       title: "",
       dataIndex: "avatar_url",
       width: 80,
-      render: (avatar) => <img width={100} alt="avatar" src={avatar} />,
+      render: (avatar) => <img width={90} alt="avatar" src={avatar} className={styles.avatar}/>,
     },
     {
       title: "Login",
@@ -27,9 +28,10 @@ const UsersTable = () => {
     {
       title: "",
       dataIndex: "html_url",
+      width: 150,
       render: (url) => (
         <a href={url} target="_blank" rel="noreferrer">
-          More..
+          Learn More
         </a>
       ),
     },
@@ -37,7 +39,6 @@ const UsersTable = () => {
 
   const rowSelection = {
     onChange: (selectedRowKeys, selectedRows) => {
-      console.log("selectedRows: ", selectedRows);
       selectedRows.length > 0
         ? setIsSelectedRow(true)
         : setIsSelectedRow(false);
@@ -47,10 +48,11 @@ const UsersTable = () => {
 
   const addToFavorites = () => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
+    message.success('Added');
   };
 
   return (
-    <div>
+    <div className={"usersTable"}>
       {isSelectedRow && (
         <Button
           type="primary"
@@ -69,6 +71,7 @@ const UsersTable = () => {
         pagination={{ pageSize: 4 }}
         rowKey="id"
         columns={columns}
+        rowClassName={"usersTableRow"}
         dataSource={results?.items}
       />
     </div>

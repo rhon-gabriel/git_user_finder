@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Input, InputNumber, Button, message } from "antd";
 import * as actions from "../redux/actions";
 import { useDispatch } from "react-redux";
+import styles from "./SearchInput.module.scss";
 
 const SearchInput = () => {
   const [searchedUser, setSearchedUser] = useState(null);
@@ -24,22 +25,21 @@ const SearchInput = () => {
     <div style={{ marginBottom: 50 }}>
       <Input.Group compact>
         <Input
-          style={{ width: "65%" }}
+          className={styles.input}
+          styles={{width: '60%'}}
           placeholder="login, email, and name"
-          size="large"
           allowClear
           onChange={(e) => setSearchedUser(e.target.value)}
         />
         <InputNumber
-          style={{ width: "25%" }}
-          placeholder="Sum of followers e.g. 2000"
-          size="large"
+          className={styles.inputNumber}
+          styles={{width: '20%'}}
+          placeholder="no. followers e.g. 2000"
           onChange={onInputNumber}
         />
         <Button
           type="primary"
-          size="large"
-          style={{ width: "10%" }}
+          className={styles.button}
           onClick={onSearch}
         >
           Search

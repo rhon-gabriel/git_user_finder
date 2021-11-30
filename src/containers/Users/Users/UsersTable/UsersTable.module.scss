@@ -1,0 +1,93 @@
+:global {
+  .usersTable {
+    .ant-table table {
+      border-spacing: 0 8px;
+      position: relative;
+    }
+
+    .ant-table-tbody {
+      .usersTableRow {
+        position: relative;
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.16);
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        overflow: hidden;
+
+        > td {
+          background: #fff;
+        }
+
+        &:hover,
+        &:focus {
+          z-index: 1;
+          box-shadow: 1px 2px 20px -4px #5f5f5f;
+        }
+      }
+    }
+
+    .ant-table-thead > tr > th {
+      padding: 8px 16px;
+      background: transparent;
+      border-bottom: none;
+      color: #999999;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .ant-table-tbody > tr > td {
+      &:first-child {
+        overflow: hidden;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      &:last-child {
+        overflow: hidden;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+
+    .ant-checkbox-input {
+      opacity: unset;
+    }
+
+    .ant-checkbox-inner {
+      width: 20px;
+      height: 20px;
+    }
+
+    .ant-pagination-item {
+      background-color: transparent;
+      border: none;
+      color: #222323;
+      font-size: 14px;
+    }
+
+    .ant-pagination-item-active {
+      background-color: #37836f;
+      padding: 15px;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .ant-pagination-item-active a {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &:hover,
+      &:focus {
+        color: #5f5f5f;
+      }
+    }
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+}
