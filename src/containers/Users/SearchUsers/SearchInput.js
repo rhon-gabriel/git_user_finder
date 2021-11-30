@@ -1,14 +1,27 @@
 import React, { useState } from "react";
-import { Input, InputNumber, Button } from "antd";
+import { Input, InputNumber, Button, message } from "antd";
+import * as actions from "../redux/actions";
+import { useDispatch } from "react-redux";
 
 const SearchInput = () => {
   const [searchedUser, setSearchedUser] = useState(null);
   const [searchedSum, setSearchedSum] = useState(null);
-  const onSearch = () => console.log(searchedUser, searchedSum);
-  const onInputNumber = (value) => setSearchedSum(value)
+  const dispatch = useDispatch();
+
+  const onSearch = () => {
+    const params = {
+      user: searchedUser,
+      followers: searchedSum,
+    };
+    searchedUser
+      ? dispatch(actions.getUsers(params))
+      : message.error("Please, add a login, email or name input");
+  };
+
+  const onInputNumber = (value) => setSearchedSum(value);
 
   return (
-    <div>
+    <div style={{ marginBottom: 50 }}>
       <Input.Group compact>
         <Input
           style={{ width: "65%" }}

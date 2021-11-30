@@ -1,0 +1,15 @@
+.title {
+  font-weight: 600;
+}
+.card {
+  border-radius: 10px;
+  .avatar {
+    height: 80px;
+    width: 80px;
+  }
+  .link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+}

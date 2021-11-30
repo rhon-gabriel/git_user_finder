@@ -1,0 +1,22 @@
+.container {
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+  .icon {
+    font-size: 24px;
+    padding: 0 20px;
+    font-weight: 600;
+    color: #429b83;
+  }
+  .header {
+    font-size: 18px;
+  }
+  .favorites {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    .text {
+      font-size: 14px;
+    }
+  }
+}
